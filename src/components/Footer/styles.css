@@ -1,0 +1,74 @@
+/**--Estilos del footer--**/
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e2e2e2;
+    padding: 20px;
+  }
+  
+  .footer-container {
+   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .footer-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 1;
+  }
+  .logo-footer {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    
+  }
+  .content-icon{
+    grid-column:  3;
+  }
+  
+  .footer-legal__text p {
+    margin-bottom: 20px;
+  
+  }
+  .footer-legal__text{
+    grid-column:span 4 ;
+  }
+  .footer-legal__text span {
+    margin-top: 20px;
+    font-weight: 600;
+   
+  }
+  
+  .footer-legal__text span a {
+    color: #4c4c4c;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .custom-line {
+    width: 100%;
+    height: 1px;
+    background-color: #6c7a72;
+    margin: 10px 0;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    grid-column: span 4;
+  }
+  @media (max-width: 920px) {
+    .footer {
+      height: 350px;
+    }
+  
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-container div {
+      margin: 10px;
+    }
+  }

@@ -1,0 +1,13 @@
+
+
+
+.logo img {
+  width: 150px;
+  height: 50px;
+  object-fit: cover;
+  margin-top: 30px;
+}
+.nav-logo {
+  overflow: hidden;
+}
+

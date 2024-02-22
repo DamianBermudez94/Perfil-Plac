@@ -1,0 +1,54 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--black);
+  color: #FFFF;
+}
+
+
+
+a{
+  text-decoration: none;
+}
+
+button, .button{
+  border: none;
+  cursor: pointer;
+  background-color: var(--green);
+  color: #FFFF;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: filter 0.25s;
+  &:hover{
+    filter: brightness(0.8);
+  }
+}
+
+button:disabled, .button:disabled{
+  filter: brightness(0.8);
+  cursor: not-allowed;
+}
+
+
+.logo img {
+  width: 150px;
+  height: 50px;
+  object-fit: cover;
+  margin-top: 30px;
+}
+.nav-logo {
+  overflow: hidden;
+}
+

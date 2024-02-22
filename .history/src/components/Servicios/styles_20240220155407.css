@@ -1,0 +1,32 @@
+/**--Seccion Servicios--**/
+
+.container-servicios {
+   
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-servicios h1 {
+  padding: 30px;
+  font-size: 45px;
+  margin: 0 auto;
+}
+.container-img {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  padding: 15px;
+}
+.container-img figure{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  transition: all .3s;
+  border-image:fill 0 linear-gradient(#0003,#000) ;
+}
+.container-img img:hover{
+
+  cursor: pointer;
+}
