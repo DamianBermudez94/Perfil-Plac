@@ -1,7 +1,7 @@
 /**Seccion Productos**/
 .container {
   background-image: url("../../img/image-fondo.jpg");
-  border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.438), #000);
+  border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.39), #000);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -17,7 +17,6 @@
   font-size: 40px;
   margin: 40px;
   padding: 20px;
-  color: #f1f1f1;
 }
 
 .productos-content {

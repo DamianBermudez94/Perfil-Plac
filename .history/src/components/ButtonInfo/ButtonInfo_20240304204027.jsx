@@ -1,11 +1,16 @@
-import { NavHashLink } from "react-router-hash-link";
+
+
 import "./style.css";
+import { NavLink } from "react-router-dom";
 
 export const ButtonInfo = () => {
+
+
+
   return (
-    <NavHashLink className="button-informacion" smooth to="#contacto">
+    <NavLink className="button-informacion">
       <span>Conoce más sobre nuestros servicios</span>
       <span></span>
-    </NavHashLink>
+    </NavLink>
   );
 };

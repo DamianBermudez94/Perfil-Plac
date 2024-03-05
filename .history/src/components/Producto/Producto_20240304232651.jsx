@@ -44,7 +44,7 @@ export const Producto = () => {
               su resistencia y durabilidad. Nuestro Durlock es la base perfecta
               para tus paredes y techos, asegurando un acabado excepcional.
             </p>
-            <ButtonInfo />
+            <ButtonInfo/>
           </article>
           <article className="productos-item__masilla content">
             <h2>Masilla y Selladores de Alto Rendimiento:</h2>
@@ -54,7 +54,7 @@ export const Producto = () => {
               garantizan un acabado impecable y una superficie lista para la
               pintura.
             </p>
-            <ButtonInfo />
+            <ButtonInfo/>
           </article>
           <article className="productos-item__perfiles content">
             <h2>Perfiles Precisos y Resistentes</h2>
@@ -64,7 +64,7 @@ export const Producto = () => {
               necesidades. Nuestros perfiles son resistentes a la corrosión y se
               fabrican con precisión para garantizar un ajuste perfecto.
             </p>
-            <ButtonInfo />
+            <ButtonInfo/>
           </article>
           <article className="productos-item__varios content">
             <h2>Variedad de Productos</h2>
@@ -73,7 +73,7 @@ export const Producto = () => {
               amplia gama de otros insumos esenciales, como tornillos, cintas y
               herramientas especializadas.
             </p>
-            <ButtonInfo />
+            <ButtonInfo/>
           </article>
         </div>
         <div className="container-card">

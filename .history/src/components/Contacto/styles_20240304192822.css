@@ -2,8 +2,12 @@
 
 .section-form {
     width: 100%;
-
-  
+    height: 723px;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
     padding: 15px;
     margin: 0 auto;
     background-color: #f1f1f1;
@@ -15,13 +19,6 @@
     font-size: 50px;
     margin-top: 20px;
   }
-   .content-form{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    justify-items: center;
-    align-items: center;
-   }
   .container-redes_sociales {
     width: 100%;
     display: flex;

@@ -5,10 +5,10 @@
     display: inline-block;
     padding: 12px;
     border: none;
-    font-size: 16px;
+    font-size: 17px;
     background-color: inherit;
     border-radius: 8px;
-  
+    font-weight: 600;
     text-align: center;
     color: #ffffff;
     box-shadow: 0 0 0 2px #6c7a72;
