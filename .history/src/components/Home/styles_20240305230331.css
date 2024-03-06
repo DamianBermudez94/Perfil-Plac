@@ -37,7 +37,7 @@
     margin-bottom: 40px;
   }
   .home-banner-container .button-informacion {
-    margin: 10px;
+    padding: 10px;
   }
   @keyframes fadeIn {
     from {

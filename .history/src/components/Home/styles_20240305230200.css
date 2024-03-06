@@ -30,15 +30,13 @@
     padding: 10px;
   }
   .home-text-section p {
-    width: 80%;
+    width: 70%;
     font-size: 35px;
     color: #fff;
     padding: 10px;
     margin-bottom: 40px;
   }
-  .home-banner-container .button-informacion {
-    margin: 10px;
-  }
+  
   @keyframes fadeIn {
     from {
       opacity: 0;

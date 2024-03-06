@@ -34,11 +34,7 @@ const Servicios = () => {
     }`} id="servicios">
       <h1>Colocación</h1>
       <div className="content-colocacion">
-      <h2 className="servicios-description">
-        Tus proyectos se vuelven realidad con nuestros servicios expertos en
-        colocación de durlock. ¡Confía en nosotros para transformar tus
-        espacios!
-      </h2>
+        <h2>Hacemos que tus proyectos se vuelvan realidad</h2>
         <div className="container-img">
           <figure>
             <img src={imagen1} alt="Perfil-Plac" />
@@ -60,7 +56,11 @@ const Servicios = () => {
           </figure>
         </div>
       </div>
-     
+      <p className="servicios-description">
+        Tus proyectos se vuelven realidad con nuestros servicios expertos en
+        colocación de durlock. ¡Confía en nosotros para transformar tus
+        espacios!
+      </p>
     </section>
   );
 };

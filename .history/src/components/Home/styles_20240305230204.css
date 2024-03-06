@@ -36,9 +36,7 @@
     padding: 10px;
     margin-bottom: 40px;
   }
-  .home-banner-container .button-informacion {
-    margin: 10px;
-  }
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
