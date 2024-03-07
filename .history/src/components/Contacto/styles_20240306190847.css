@@ -257,7 +257,7 @@ ul {
   }
  
   .container-redes_sociales h2 {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }
 @media (max-width: 768px) {
@@ -266,13 +266,8 @@ ul {
     border-left:none;
     border-top: 1px solid #fff;
   }
- 
-}
-
-@media (max-width: 480px) {
   .content-form {
-   
-    max-width: 350px;
+    
+    max-width: 300px;
   }
- 
 }

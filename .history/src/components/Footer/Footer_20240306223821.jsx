@@ -33,7 +33,6 @@ export const Footer = () => {
                 className="link"
                 data-social="whatsapp"
                 aria-label="Whatsapp"
-                target="_blank"
               >
                 <FaWhatsapp />
               </a>
@@ -42,11 +41,10 @@ export const Footer = () => {
             </li>
             <li className="icon-content">
               <a
-                href="https://mail.google.com/mail/u/0/#inbox"
+                href=""
                 className="link"
                 data-social="email"
                 aria-label="Email"
-                target="_blank"
               >
                 <TfiEmail />
               </a>

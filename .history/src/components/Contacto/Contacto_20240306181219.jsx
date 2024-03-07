@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { FaFacebookF } from "react-icons/fa";
-
+import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 
@@ -72,7 +72,12 @@ const Contacto = () => {
             </a>
             <div className="tooltip">Facebook</div>
           </li>
-        
+          <li className="icon-content">
+            <a href="#" className="link" data-social="instagram" aria-label="Instagram">
+              <FaInstagram />
+            </a>
+            <div className="tooltip">Instagram</div>
+          </li>
           <li className="icon-content">
             <a href="#" className="link" data-social="whatsapp" aria-label="WhatsApp">
               <FaWhatsapp />

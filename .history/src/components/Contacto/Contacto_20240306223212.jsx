@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { FaFacebookF } from "react-icons/fa";
-
+import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 

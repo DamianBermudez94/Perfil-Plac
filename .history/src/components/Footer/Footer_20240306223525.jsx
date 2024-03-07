@@ -15,11 +15,10 @@ export const Footer = () => {
           <ul className="container-red__social">
             <li className="icon-content">
               <a
-                href="https://www.facebook.com/profile.php?id=61551926581846&locale=es_LA"
+                href=""
                 className="link"
                 data-social="facebook"
                 aria-label="Facebook"
-                target="_blank"
               >
                 <FaFacebookF className="icon-facebook" />
               </a>
@@ -29,11 +28,10 @@ export const Footer = () => {
           
             <li className="icon-content">
               <a
-                href="https://wa.me/+542227485990"
+                href=""
                 className="link"
                 data-social="whatsapp"
                 aria-label="Whatsapp"
-                target="_blank"
               >
                 <FaWhatsapp />
               </a>
@@ -42,11 +40,10 @@ export const Footer = () => {
             </li>
             <li className="icon-content">
               <a
-                href="https://mail.google.com/mail/u/0/#inbox"
+                href=""
                 className="link"
                 data-social="email"
                 aria-label="Email"
-                target="_blank"
               >
                 <TfiEmail />
               </a>

@@ -270,9 +270,10 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .content-form {
-   
-    max-width: 350px;
+  .container-redes_sociales {
+    width: 80%;
+    border-left:none;
+    border-top: 1px solid #fff;
   }
  
 }
