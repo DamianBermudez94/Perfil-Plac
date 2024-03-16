@@ -1,0 +1,627 @@
+/**Seccion Productos**/
+.container {
+  border-image: fill 0 linear-gradient(rgba(25, 45, 48, 0.7), #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.producto h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 40px;
+  padding: 20px;
+  color: #f1f1f1;
+}
+
+.productos-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-content: center;
+  grid-gap: 30px;
+  padding: 30px;
+}
+.productos-item__durlock {
+  background-image: url("../../../public/image/durlock.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 30px;
+  box-shadow: 5px 5px 3px #bebebe;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px auto;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.productos-item__durlock::before,
+.productos-item__durlock::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.548);
+}
+
+.productos-item__durlock::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.productos-item__durlock::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.productos-item__durlock:hover::before,
+.productos-item__durlock:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+.productos-item__durlock h2 {
+  display: none;
+}
+
+.productos-item__durlock p {
+  display: none;
+}
+
+.productos-item__durlock:hover p {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  padding: 25px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.productos-item__durlock:hover h2 {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+  display: block;
+  padding: 25px;
+  font-size: 35px;
+}
+.productos-item__durlock .button-informacion {
+  display: none;
+}
+.productos-item__durlock:hover .button-informacion {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-left: 25px;
+}
+
+.productos-item__masilla {
+  background-image: url("../../../public/image/masilla-durlock-32-kg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  width: 500px;
+  height: 500px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 30px;
+  box-shadow: 5px 5px 3px #bebebe;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.productos-item__masilla::before,
+.productos-item__masilla::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.548);
+}
+
+.productos-item__masilla::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.productos-item__masilla::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.productos-item__masilla:hover::before,
+.productos-item__masilla:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+.productos-item__masilla h2 {
+  display: none;
+}
+
+.productos-item__masilla p {
+  display: none;
+}
+
+.productos-item__masilla:hover p {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  padding: 25px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.productos-item__masilla:hover h2 {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+  display: block;
+  padding: 25px;
+  font-size: 35px;
+}
+.productos-item__masilla .button-informacion {
+  display: none;
+}
+.productos-item__masilla:hover .button-informacion {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-left: 25px;
+}
+
+.productos-item__perfiles {
+  background-image: url("../../img/perfiles.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  width: 500px;
+  height: 500px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 30px;
+  box-shadow: 5px 5px 3px #bebebe;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.productos-item__perfiles::before,
+.productos-item__perfiles::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.548);
+}
+
+.productos-item__perfiles::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.productos-item__perfiles::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.productos-item__perfiles:hover::before,
+.productos-item__perfiles:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+.productos-item__perfiles h2 {
+  display: none;
+}
+
+.productos-item__perfiles p {
+  display: none;
+}
+
+.productos-item__perfiles:hover p {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  padding: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.productos-item__perfiles:hover h2 {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+  display: block;
+  padding: 25px;
+  font-size: 35px;
+}
+.productos-item__perfiles .button-informacion {
+  display: none;
+}
+.productos-item__perfiles:hover .button-informacion {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-left: 25px;
+}
+.productos-item__varios {
+  background-image: url("../../img/productos-varios__durlock.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 30px;
+  box-shadow: 5px 5px 3px #bebebe;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.productos-item__varios::before,
+.productos-item__varios::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.548);
+}
+
+.productos-item__varios::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.productos-item__varios::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.productos-item__varios:hover::before,
+.productos-item__varios:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+.productos-item__varios h2 {
+  display: none;
+}
+
+.productos-item__varios p {
+  display: none;
+}
+
+.productos-item__varios:hover p {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  padding: 25px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.productos-item__varios:hover h2 {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+  display: block;
+  padding: 25px;
+  font-size: 35px;
+}
+.productos-item__varios .button-informacion {
+  display: none;
+}
+.productos-item__varios:hover .button-informacion {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-left: 25px;
+}
+
+.container-servicios {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-servicios h1 {
+  padding: 30px;
+  font-size: 45px;
+  margin: 0 auto;
+}
+.container-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 15px;
+}
+.card-servicios {
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 750px;
+  border-radius: 2rem;
+  flex-direction: column;
+  text-align: center;
+}
+.container-servicios strong {
+  width: 100%;
+  margin-bottom: 50px;
+  grid-column: span 4;
+  text-align: center;
+  color: #fff;
+}
+
+.card-servicios p {
+  color: #fff;
+  max-width: 500px;
+  font-size: 1.1rem;
+  margin: 2rem 0rem;
+}
+
+.card-servicios h2 {
+  margin-top: 1.5rem;
+  font-size: 25px;
+  color: #fff;
+}
+
+.container-icons {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons-servicios {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+}
+
+@media (max-width: 1120px) {
+  .productos-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+    max-width: 100%;
+  }
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .productos-item__durlock {
+    width: 420px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .productos-item__durlock:hover h2 {
+    font-size: 28px;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  .productos-item__durlock:hover p {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  .productos-item__masilla {
+    width: 420px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .productos-item__masilla:hover h2 {
+    font-size: 28px;
+    padding: 10px;
+    margin-left: 15px;
+  }
+  .productos-item__masilla:hover p {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 15px;
+  }
+  .productos-item__perfiles {
+    width: 420px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .productos-item__perfiles:hover h2 {
+    font-size: 28px;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  .productos-item__perfiles:hover p {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  .productos-item__varios {
+    width: 420px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .productos-item__varios:hover h2 {
+    font-size: 28px;
+    padding: 10px;
+    margin-left: 15px;
+  }
+  .productos-item__varios:hover p {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 15px;
+  }
+  .container-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-item__durlock {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  .productos-item__durlock:hover h2 {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .productos-item__durlock:hover p {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .productos-item__durlock:hover .button-informacion {
+    width: 70%;
+    margin-left: 10px;
+  }
+  .productos-item__masilla {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  .productos-item__masilla:hover h2 {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .productos-item__masilla:hover p {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .productos-item__masilla:hover .button-informacion {
+    width: 70%;
+    margin-left: 10px;
+  }
+  .productos-item__perfiles {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  .productos-item__perfiles:hover h2 {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .productos-item__perfiles:hover p {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .productos-item__perfiles:hover .button-informacion {
+    width: 70%;
+    margin-left: 10px;
+  }
+  .productos-item__varios {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  .productos-item__varios:hover h2 {
+    font-size: 24px;
+    padding: 10px;
+  }
+  .productos-item__varios:hover p {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .productos-item__varios:hover .button-informacion {
+    width: 70%;
+
+    margin-left: 10px;
+  }
+  .container-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
