@@ -55,7 +55,7 @@ export const Producto = () => {
             </div>
           </article>
           <article className="productos-item">
-            <img src={masilla} alt="Perfil-Plac - construcción en seco en Lobos - venta de Durlock en Lobos" />
+            <img src={masilla} alt="Perfil-Plac Durlock construccion-en-seco" />
             <div className="content-card_product">
               <h2>Masilla y Selladores de Alto Rendimiento:</h2>
               <p>
@@ -70,7 +70,7 @@ export const Producto = () => {
           <article className="productos-item">
             <img
               src={perfiles}
-              alt="Perfil-Plac - construcción en seco en Lobos - venta de Durlock en Lobos"
+              alt="Perfil-Plac Durlock construccion-en-seco"
             />
             <div className="content-card_product">
               <h2>Perfiles Precisos y Resistentes</h2>
@@ -86,7 +86,7 @@ export const Producto = () => {
           <article className="productos-item">
             <img
               src={productosVarios}
-              alt="Perfil-Plac - construcción en seco en Lobos - venta de Durlock en Lobos"
+              alt="Perfil-Plac Durlock construccion-en-seco"
             />
             <div className="content-card_product">
               <h2>Variedad de Productos</h2>
