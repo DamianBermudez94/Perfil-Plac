@@ -1,0 +1,14 @@
+/* En el mismo archivo o en un archivo CSS separado */
+.whatsapp-button {
+    width: 2.6em;
+    height: 2.6em;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: #fff;
+}

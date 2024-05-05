@@ -1,0 +1,45 @@
+.button-informacion {
+    width: 300px;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 0 0 2px #6c7a72;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .button-informacion span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #1B4242;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(.84,-0.9,.39,1.64);
+  }
+  .button-informacion span:first-child {
+    position: relative;
+    z-index: 1;
+  }
+  .button-informacion:hover {
+    box-shadow: 0 0 0 5px #6c7a72;
+    color: #ffffff;
+  }
+  .button-informacion:active {
+    scale: 0.95;
+  }
+  
+  .button-informacion:hover span:last-child {
+    width: 350px;
+    height: 150px;
+    opacity: 1;
+  }
