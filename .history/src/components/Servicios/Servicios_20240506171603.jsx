@@ -17,16 +17,9 @@ const Servicios = () => {
     bottom: 0,
     right: 0,
   });
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-  // Define las imágenes en un array
-  const imagenes = [
-    { src: imagen1, id:1, alt: "Perfil-Plac durlock-construccion-en-seco" },
-    { src: imagen2, id:2,alt: "Perfil-Plac durlock-construccion-en-seco" },
-    { src: imagen3, id:3,alt: "Perfil-Plac durlock-construccion-en-seco" },
-    { src: imagen4, id:4,alt: "Perfil-Plac durlock-construccion-en-seco" },
-  ];
+  
 
-  const openModal = (event,index) => {
+  const openModal = (event) => {
     const rect = event.target.getBoundingClientRect();
     setModalPosition({
       top: rect.top + window.scrollX,
@@ -34,7 +27,7 @@ const Servicios = () => {
       bottom: rect.bottom + window.scrollY,
       right: rect.right + window.scrollX,
     });
-    setSelectedImageIndex(index);
+   
     setModalIsOpen(true);
   };
   const handleScroll = debounce(() => {
@@ -56,6 +49,7 @@ const Servicios = () => {
     };
   }, [handleScroll]);
 
+
   return (
     <section
       className={`container-servicios scroll-reveal ${
@@ -69,36 +63,52 @@ const Servicios = () => {
           Estos son algunos de nuestros proyectos
         </h2>
         <Modal
-          isOpen={modalIsOpen}
-          contentLabel="Detalles del Proyecto"
-          shouldCloseOnOverlayClick={true}
-          className="mi-modal" // Agrega una clase para personalizar el modal
-          overlayClassName="mi-modal-overlay"
-          onRequestClose={() => setModalIsOpen(false)}
-        >
-          {selectedImageIndex !== null && (
-            <div className="container-img">
-              <figure>
-                <img
-                  src={imagenes[selectedImageIndex].src}
-                  alt={imagenes[selectedImageIndex].alt}
-                />
-              </figure>
-            </div>
-          )}
-        </Modal>
-        {imagenes.map((imagen, index) => (
-          <div
-            key={index}
-            className="container-img"
-            onClick={(event) => openModal(event, index)}
-          >
-            <figure>
-              <img src={imagen.src} alt={imagen.alt} />
+              isOpen={modalIsOpen}
+              contentLabel="Detalles del Proyecto"
+              shouldCloseOnOverlayClick={true}
+              className="mi-modal" // Agrega una clase para personalizar el modal
+              overlayClassName="mi-modal-overlay"
+              onRequestClose={() => setModalIsOpen(false)}
+            >
+             
+            </Modal>
+        <div className="container-img" onClick={(event) => openModal(event)}>
+          <LazyLoad >
+            <figure >
+              <img
+                className="container-modal" 
+                src={imagen1}
+                alt="Perfil-Plac durlock-construccion-en-seco"
+              />
+              <p>holamundo</p>
             </figure>
-          </div>
-        ))}
-
+          </LazyLoad>
+        </div>
+        <div className="container-img" onClick={(event) => openModal(event)}>
+          <figure>
+            <img src={imagen2} alt="Perfil-Plac durlock-construccion-en-seco" />
+          </figure>
+        </div>
+        <div className="container-img" onClick={(event) => openModal(event)}>
+          <LazyLoad>
+            <figure>
+              <img
+                src={imagen3}
+                alt="Perfil-Plac durlock-construccion-en-seco"
+              />
+            </figure>
+          </LazyLoad>
+        </div>
+        <div className="container-img" onClick={(event) => openModal(event)}>
+          <LazyLoad>
+            <figure>
+              <img
+                src={imagen4}
+                alt="Perfil-Plac durlock-construccion-en-seco"
+              />
+            </figure>
+          </LazyLoad>
+        </div>
         <p className="servicios-description">
           Tus proyectos se vuelven realidad con nuestros servicios expertos en
           colocación de durlock. ¡Confía en nosotros para transformar tus

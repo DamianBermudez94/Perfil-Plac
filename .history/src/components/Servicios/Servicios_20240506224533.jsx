@@ -17,16 +17,16 @@ const Servicios = () => {
     bottom: 0,
     right: 0,
   });
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [imagenSeleccionado, setimagenSeleccionado] = useState(null);
   // Define las imágenes en un array
   const imagenes = [
-    { src: imagen1, id:1, alt: "Perfil-Plac durlock-construccion-en-seco" },
-    { src: imagen2, id:2,alt: "Perfil-Plac durlock-construccion-en-seco" },
-    { src: imagen3, id:3,alt: "Perfil-Plac durlock-construccion-en-seco" },
-    { src: imagen4, id:4,alt: "Perfil-Plac durlock-construccion-en-seco" },
+    { src: imagen1, id:"1", alt: "Perfil-Plac durlock-construccion-en-seco" },
+    { src: imagen2, id:"2" ,alt: "Perfil-Plac durlock-construccion-en-seco" },
+    { src: imagen3, id:"3" ,alt: "Perfil-Plac durlock-construccion-en-seco" },
+    { src: imagen4, id:"4", alt: "Perfil-Plac durlock-construccion-en-seco" },
   ];
 
-  const openModal = (event,index) => {
+  const openModal = (event) => {
     const rect = event.target.getBoundingClientRect();
     setModalPosition({
       top: rect.top + window.scrollX,
@@ -34,7 +34,7 @@ const Servicios = () => {
       bottom: rect.bottom + window.scrollY,
       right: rect.right + window.scrollX,
     });
-    setSelectedImageIndex(index);
+    setimagenSeleccionado(id);
     setModalIsOpen(true);
   };
   const handleScroll = debounce(() => {
@@ -76,16 +76,14 @@ const Servicios = () => {
           overlayClassName="mi-modal-overlay"
           onRequestClose={() => setModalIsOpen(false)}
         >
-          {selectedImageIndex !== null && (
-            <div className="container-img">
-              <figure>
-                <img
-                  src={imagenes[selectedImageIndex].src}
-                  alt={imagenes[selectedImageIndex].alt}
-                />
-              </figure>
-            </div>
-          )}
+          <div className="container-img">
+            <figure>
+              <img
+                src={imagenes[selectedImageIndex].src}
+                alt={imagenes[selectedImageIndex].alt}
+              />
+            </figure>
+          </div>
         </Modal>
         {imagenes.map((imagen, index) => (
           <div

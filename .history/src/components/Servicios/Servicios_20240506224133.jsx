@@ -17,16 +17,15 @@ const Servicios = () => {
     bottom: 0,
     right: 0,
   });
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-  // Define las imágenes en un array
-  const imagenes = [
-    { src: imagen1, id:1, alt: "Perfil-Plac durlock-construccion-en-seco" },
-    { src: imagen2, id:2,alt: "Perfil-Plac durlock-construccion-en-seco" },
-    { src: imagen3, id:3,alt: "Perfil-Plac durlock-construccion-en-seco" },
-    { src: imagen4, id:4,alt: "Perfil-Plac durlock-construccion-en-seco" },
-  ];
+    // Define las imágenes en un array
+    const imagenes = [
+      { src: imagen1, alt: "Perfil-Plac durlock-construccion-en-seco" },
+      { src: imagen2, alt: "Perfil-Plac durlock-construccion-en-seco" },
+      { src: imagen3, alt: "Perfil-Plac durlock-construccion-en-seco" },
+      { src: imagen4, alt: "Perfil-Plac durlock-construccion-en-seco" }
+    ];
 
-  const openModal = (event,index) => {
+  const openModal = (event) => {
     const rect = event.target.getBoundingClientRect();
     setModalPosition({
       top: rect.top + window.scrollX,
@@ -34,7 +33,7 @@ const Servicios = () => {
       bottom: rect.bottom + window.scrollY,
       right: rect.right + window.scrollX,
     });
-    setSelectedImageIndex(index);
+
     setModalIsOpen(true);
   };
   const handleScroll = debounce(() => {
@@ -76,29 +75,16 @@ const Servicios = () => {
           overlayClassName="mi-modal-overlay"
           onRequestClose={() => setModalIsOpen(false)}
         >
-          {selectedImageIndex !== null && (
-            <div className="container-img">
-              <figure>
-                <img
-                  src={imagenes[selectedImageIndex].src}
-                  alt={imagenes[selectedImageIndex].alt}
-                />
-              </figure>
-            </div>
-          )}
-        </Modal>
-        {imagenes.map((imagen, index) => (
-          <div
-            key={index}
-            className="container-img"
-            onClick={(event) => openModal(event, index)}
-          >
+      {imagenes.map((imagen, index) => (
+          <div key={index} className="container-img" onClick={(event) => openModal(event, index)}>
             <figure>
               <img src={imagen.src} alt={imagen.alt} />
             </figure>
           </div>
         ))}
-
+        </Modal>
+       
+      
         <p className="servicios-description">
           Tus proyectos se vuelven realidad con nuestros servicios expertos en
           colocación de durlock. ¡Confía en nosotros para transformar tus

@@ -26,7 +26,7 @@ const Servicios = () => {
     { src: imagen4, id:4,alt: "Perfil-Plac durlock-construccion-en-seco" },
   ];
 
-  const openModal = (event,index) => {
+  const openModal = (event) => {
     const rect = event.target.getBoundingClientRect();
     setModalPosition({
       top: rect.top + window.scrollX,
@@ -34,7 +34,7 @@ const Servicios = () => {
       bottom: rect.bottom + window.scrollY,
       right: rect.right + window.scrollX,
     });
-    setSelectedImageIndex(index);
+
     setModalIsOpen(true);
   };
   const handleScroll = debounce(() => {
@@ -76,7 +76,7 @@ const Servicios = () => {
           overlayClassName="mi-modal-overlay"
           onRequestClose={() => setModalIsOpen(false)}
         >
-          {selectedImageIndex !== null && (
+          {setSelectedImageIndex !== null && (
             <div className="container-img">
               <figure>
                 <img
