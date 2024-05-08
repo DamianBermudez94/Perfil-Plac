@@ -1,0 +1,132 @@
+import { useEffect, useState } from "react";
+import Modal from "react-modal";
+import LazyLoad from "react-lazyload";
+import debounce from "lodash.debounce";
+import imagen1 from "../../../public/image/durlock-construccion-en-seco.jpg";
+import imagen2 from "../../../public/image/durlock-construccion-en-seco2.jpg";
+import imagen3 from "../../../public/image/durlock-construccion-en-seco3.jpg";
+import imagen4 from "../../../public/image/durlock-construccion-en-seco4.jpg";
+import "./styles.css";
+
+const Servicios = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalPosition, setModalPosition] = useState({
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  });
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  // Define las imágenes en un array
+  const imagenes = [
+    { src: imagen1, id: 1, alt: "Perfil-Plac durlock-construccion-en-seco" },
+    { src: imagen2, id: 2, alt: "Perfil-Plac durlock-construccion-en-seco" },
+    { src: imagen3, id: 3, alt: "Perfil-Plac durlock-construccion-en-seco" },
+    { src: imagen4, id: 4, alt: "Perfil-Plac durlock-construccion-en-seco" },
+  ];
+
+  const openModal = (event, index) => {
+    const rect = event.target.getBoundingClientRect();
+    setModalPosition({
+      top: rect.top + window.scrollX,
+      left: rect.left + window.scrollX,
+      bottom: rect.bottom + window.scrollY,
+      right: rect.right + window.scrollX,
+    });
+    setSelectedImageIndex(index);
+    setModalIsOpen(true);
+  };
+  const handleScroll = debounce(() => {
+    const scrollY = window.scrollY;
+    const revealThreshold = 2800;
+
+    if (scrollY > revealThreshold) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }, 200);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
+  const handlePrev = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === 0 ? imagenes.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === imagenes.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  return (
+    <section
+      className={`container-servicios scroll-reveal ${
+        isVisible ? "visible" : ""
+      }`}
+      id="proyectos"
+    >
+      <h1>Proyectos</h1>
+      <h2 className="servicios-sub__title">
+          Estos son algunos de nuestros proyectos
+        </h2>
+      <div className="content-colocacion">
+       
+        <Modal
+          isOpen={modalIsOpen}
+          contentLabel="Detalles del Proyecto"
+          shouldCloseOnOverlayClick={true}
+          className="mi-modal" // Agrega una clase para personalizar el modal
+          overlayClassName="mi-modal-overlay"
+          onRequestClose={() => setModalIsOpen(false)}
+        >
+          {selectedImageIndex !== null && (
+            <div className="modal-container">
+              <LazyLoad>
+                <img
+                  src={imagenes[selectedImageIndex].src}
+                  alt={imagenes[selectedImageIndex].alt}
+                />
+              </LazyLoad>
+              <div>
+              <button className="button-prev" onClick={handlePrev}>{"<"}</button>
+              <button className="button-next" onClick={handleNext}>{">"}</button>
+              </div>
+              
+            </div>
+          )}
+        </Modal>
+        {imagenes.map((imagen, index) => (
+          <div
+            key={index}
+            className="container-img"
+            onClick={(event) => openModal(event, index)}
+          >
+            <LazyLoad>
+              <figure>
+                <img src={imagen.src} alt={imagen.alt} />
+              </figure>
+            </LazyLoad>
+          </div>
+        ))}
+
+        <p className="servicios-description">
+          Tus proyectos se vuelven realidad con nuestros servicios expertos en
+          colocación de durlock. ¡Confía en nosotros para transformar tus
+          espacios!
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default Servicios;
