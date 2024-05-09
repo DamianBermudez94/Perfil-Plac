@@ -33,6 +33,7 @@
   max-width: 500px;
   height: 500px;
   transition: transform 0.5s ease-in-out;
+  
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -274,5 +275,8 @@
   .container-card {
     grid-template-columns: repeat(1, 1fr);
   }
- 
+  .productos-item img {
+    
+    height: 800px;
+}
 }
