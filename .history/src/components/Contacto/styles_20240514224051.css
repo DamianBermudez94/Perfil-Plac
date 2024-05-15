@@ -67,6 +67,7 @@
 .input-container {
   display: grid;
   position: relative;
+
 }
 
 .ic1 {
@@ -212,7 +213,7 @@
   .content-form {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    max-width: 680px;
+    max-width: 600px;
   }
   .container-redes_sociales {
     width: 80%;
@@ -238,7 +239,7 @@
     border-top: 1px solid #fff;
   }
   .content-form {
-    max-width: 480px;
+    max-width: 400px;
   }
 }
 
@@ -246,14 +247,6 @@
   .content-form {
     max-width: 320px;
   }
-  .placeholder {
-    font-size: 1.1em;
-  }
-  .input:focus ~ .placeholder,
-.input-textarea:focus ~ .placeholder {
- 
-  font-size: 1.1em;
-}
 
   .container-redes_sociales h2 {
     width: 100%;

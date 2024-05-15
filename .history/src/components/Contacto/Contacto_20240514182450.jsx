@@ -45,7 +45,6 @@ const Contacto = () => {
               className="input"
               type="text"
               placeholder=""
-              required
             />
             <div className="cut"></div>
             <label htmlFor="firstname" className="placeholder">
@@ -59,7 +58,6 @@ const Contacto = () => {
               name="apellido"
               type="text"
               placeholder=""
-              required
             />
             <div className="cut"></div>
             <label htmlFor="lastname" className="placeholder">
@@ -73,7 +71,6 @@ const Contacto = () => {
               name="email"
               type="email"
               placeholder=""
-              required
             />
             <div className="cut cut-short"></div>
             <label htmlFor="email" className="placeholder">
@@ -87,21 +84,19 @@ const Contacto = () => {
               name="telefono"
               type="tel"
               placeholder=""
-              required
             />
             <div className="cut cut-short"></div>
             <label htmlFor="telefono" className="placeholder">
               Telefono
             </label>
           </div>
-          <div className="container-textarea ic2">
+          <div className="container ic2">
             <textarea
               id="asunto"
               className="input-textarea"
               name="asunto"
               type="text"
               placeholder=""
-              required
             />
             <div className="cut cut-short"></div>
             <label htmlFor="asunto" className="placeholder">

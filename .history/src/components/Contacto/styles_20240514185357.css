@@ -21,6 +21,7 @@
 .content-form {
   width: 100%;
   max-width: 1200px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +33,7 @@
   ); /* Fondo blanco semi-transparente */
   backdrop-filter: blur(10px);
   border-radius: 5px;
-  margin: 40px;
+  margin: 10px;
   padding: 10px;
 }
 .container-redes_sociales {
@@ -56,25 +57,24 @@
 
 .form {
   width: 100%;
-  padding: 30px;
+  border-radius: 20px;
+  padding: 20px;
   display: grid;
-  justify-content: center;
-  align-items: center;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 5px;
 }
 
 .input-container {
   display: grid;
   position: relative;
+  width: 100%;
 }
 
 .ic1 {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .ic2 {
-  margin-top: 10px;
 }
 
 .input {
@@ -106,9 +106,7 @@
 }
 
 .input:focus ~ .cut,
-.input:not(:placeholder-shown) ~ .cut,
-.input-textarea ~ .cut,
-.input-textarea:not(:placeholder-shown) ~ .cut {
+.input:not(:placeholder-shown) ~ .cut {
   transform: translateY(8px);
 }
 
@@ -125,19 +123,15 @@
 }
 
 .input:focus ~ .placeholder,
-.input:not(:placeholder-shown) ~ .placeholder,
-.input-textarea:focus ~ .placeholder,
-.input-textarea:not(:placeholder-shown) ~ .placeholder {
+.input:not(:placeholder-shown) ~ .placeholder {
   transform: translateY(-40px) translateX(5px) scale(0.9);
 }
 
-.input:not(:placeholder-shown) ~ .placeholder,
-.input-textarea:not(:placeholder-shown) ~ .placeholder {
+.input:not(:placeholder-shown) ~ .placeholder {
   color: #9ec8b9;
 }
 
-.input:focus ~ .placeholder,
-.input-textarea:focus ~ .placeholder {
+.input:focus ~ .placeholder {
   color: #ffffff;
   padding-bottom: 20px;
   font-size: 1.5em;
@@ -154,12 +148,11 @@
   min-height: 200px;
   max-height: 200px;
   padding: 10px;
-  font-size: 1.1em;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
   color: #000;
   box-sizing: border-box;
-  margin: 20px 0;
 }
 .input-textarea {
   outline: none; /* Quita el contorno predeterminado al estar enfocado */
@@ -167,16 +160,18 @@
 }
 .container-submit {
   width: 100%;
-  justify-items: center;
+  align-items: center;
+  justify-content: center;
   grid-column: span 2;
+
 }
 .submit {
   width: 200px;
   height: 50px;
   background-color: #1b4242;
   border-radius: 12px;
-
   border: 0;
+  box-sizing: border-box;
   color: #eee;
   cursor: pointer;
   font-size: 1.3em;
@@ -194,14 +189,12 @@
 }
 
 @media (max-width: 1200px) {
+  
   .container-redes_sociales {
     width: 80%;
   }
   .container-redes_sociales .content-icon {
     margin: 0 auto;
-  }
-  .content-form {
-    max-width: 900px;
   }
 }
 
@@ -212,23 +205,17 @@
   .content-form {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    max-width: 680px;
+  
+    max-width: 500px;
   }
   .container-redes_sociales {
     width: 80%;
-    height: 300px;
     border-left: none;
     border-top: 1px solid #fff;
   }
 
   .container-redes_sociales h2 {
-    margin-top: 20px;
-    font-size: 1.3em;
-  }
-  .submit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 40px;
   }
 }
 @media (max-width: 768px) {
@@ -237,31 +224,19 @@
     border-left: none;
     border-top: 1px solid #fff;
   }
-  .content-form {
-    max-width: 480px;
-  }
 }
 
 @media (max-width: 480px) {
   .content-form {
     max-width: 320px;
   }
-  .placeholder {
-    font-size: 1.1em;
+  .container-red__social {
+    margin-top: 20px;
   }
-  .input:focus ~ .placeholder,
-.input-textarea:focus ~ .placeholder {
- 
-  font-size: 1.1em;
-}
-
   .container-redes_sociales h2 {
     width: 100%;
     margin: 20px 0 20px 0;
     font-size: 1.1em;
     line-height: 1.5;
-  }
-  .content-form {
-    max-width: 300px;
   }
 }

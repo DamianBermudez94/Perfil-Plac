@@ -249,11 +249,6 @@
   .placeholder {
     font-size: 1.1em;
   }
-  .input:focus ~ .placeholder,
-.input-textarea:focus ~ .placeholder {
- 
-  font-size: 1.1em;
-}
 
   .container-redes_sociales h2 {
     width: 100%;

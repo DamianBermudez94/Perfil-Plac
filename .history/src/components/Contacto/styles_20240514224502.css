@@ -67,6 +67,7 @@
 .input-container {
   display: grid;
   position: relative;
+
 }
 
 .ic1 {
@@ -247,13 +248,10 @@
     max-width: 320px;
   }
   .placeholder {
-    font-size: 1.1em;
-  }
-  .input:focus ~ .placeholder,
-.input-textarea:focus ~ .placeholder {
  
-  font-size: 1.1em;
-}
+    font-size: 1.1em;
+   
+  }
 
   .container-redes_sociales h2 {
     width: 100%;
